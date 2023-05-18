@@ -1,0 +1,13 @@
+{
+    "tapis_instance": {
+        "base_url": "https://tacc.tapis.io",
+        "username": "",
+        "password": "",
+        "tenant_id": "tacc"
+    },
+    "tapis_user_credentials": {
+        "systemId": "tacc-sample-tapistest-uh-test",
+        "username": "tapistest2",
+        "list_file_path": "/home/tapistest2"
+    }
+}

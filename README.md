@@ -1,0 +1,1 @@
+Code for checking a Tapis storage endpoint for specific files existence and that they have a size > 0.
