@@ -15,16 +15,6 @@ t = Tapis(base_url=configData["tapis_instance"]["base_url"], username=configData
 # Generate access token
 t.get_tokens()
 
-# Create the system
-if t.get_access_jwt is None:
-    t.systems.createSystem(**storage_system)
-
-# Register Credentials for the system
-t.systems.createUserCredential(systemId=configData["tapis_user_credentials"]["systemId"],
-                                userName=configData["tapis_user_credentials"]["username"], 
-                                publicKey=credentials["publicKey"], 
-                                privateKey=credentials["privateKey"],
-                                )
 # Access the file system
 tapis_files = t.files.listFiles(systemId=configData["tapis_user_credentials"]["systemId"], path=configData["tapis_user_credentials"]["list_file_path"])
 for ts in tapis_files:
