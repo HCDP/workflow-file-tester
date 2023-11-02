@@ -20,7 +20,11 @@ else
 	fi
 fi
 
-echo "[task.sh] [3/3] Checking Files"
+echo "[task.sh] [3/4] Replacing Dates"
+python3 scripts/update_date_string.py upload.json upload_rep.json
+mv upload_rep.json upload.json
+
+echo "[task.sh] [4/4] Checking Files"
 python3 scripts/tapis_file_lister.py
 
 echo "[task.sh] All done!"
