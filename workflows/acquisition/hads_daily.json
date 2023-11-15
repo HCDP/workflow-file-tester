@@ -1,0 +1,41 @@
+{
+    "global_cache": "cache.pk",
+    "retry": 10,
+    "print_exec_stats": true,
+    "write_exec_stats": "stats.json",
+    "agave_options": {
+        "api_server": "https://ikeauth.its.hawaii.edu",
+        "username": "inject_username_at_runtime",
+        "password": "inject_password_at_runtime",
+        "api_key": "inject_api_key_at_runtime",
+        "api_secret": "inject_api_secret_at_runtime"
+    },
+    "upload": [
+        {
+            "local_path": "/home/hawaii_climate_products_container/preliminary/data_aqs/data_outputs/hads/parse/%y%m%d_hads_parsed.csv",
+            "remote_path": "HCDP/workflow_data/preliminary_test/data_aqs/data_outputs/hads/parse",
+            "rename": "%y%m%d_hads_parsed.csv",
+            "system_id": "ikewai-annotated-data",
+            "dir_permissions": [
+                {
+                    "permission": "READ",
+                    "recursive": true,
+                    "username": "public"
+                }
+            ]
+        },
+        {
+            "local_path": "/home/hawaii_climate_products_container/preliminary/data_aqs/data_outputs/hads/raw/hads_hi_page_ending_%y_%m_%d_HST.txt",
+            "remote_path": "HCDP/workflow_data/preliminary_test/data_aqs/data_outputs/hads/raw",
+            "rename": "hads_hi_page_ending_%y_%m_%d_HST.txt",
+            "system_id": "ikewai-annotated-data",
+            "dir_permissions": [
+                {
+                    "permission": "READ",
+                    "recursive": true,
+                    "username": "public"
+                }
+            ]
+        }
+    ]
+}
