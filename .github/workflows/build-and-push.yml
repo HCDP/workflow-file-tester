@@ -32,4 +32,4 @@ jobs:
     - name: Tag the container as latest
       run: docker tag ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:${{ env.TAG }} ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:latest
     - name: Push the container
-      run: docker push ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:${{ env.TAG }} && docker push ghcr.io/ikewai/${{ env.CONTAINER_NAME }}:latest
+      run: docker push ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:${{ env.TAG }} && docker push ghcr.io/hcdp/${{ env.CONTAINER_NAME }}:latest
